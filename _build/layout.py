@@ -2,6 +2,7 @@
 import hashlib
 import json
 import os
+import re
 
 LANGS = {
     "en": {"dir": "", "html": "en-GB", "label": "EN", "name": "English"},
@@ -228,6 +229,11 @@ def footer(lang, page):
 PRELOAD = {"en": ["bricolage", "hanken"], "zh": ["bricolage", "noto-sans-tc-700"]}
 
 
+def no_stops(html):
+    """Headings carry no closing full stop (. or 。)."""
+    return re.sub(r"[.。](\s*</h[1-3]>)", r"\1", html)
+
+
 def page(lang, name, title, description, body, body_class=""):
     a = asset(lang)
     meta = LANGS[lang]
@@ -244,7 +250,7 @@ def page(lang, name, title, description, body, body_class=""):
                     "addressLocality": "London", "postalCode": "EC1V 2NX", "addressCountry": "GB"},
         "areaServed": "United Kingdom", "knowsLanguage": ["en", "yue", "cmn"],
     }, ensure_ascii=False)
-    return f"""<!doctype html>
+    return no_stops(f"""<!doctype html>
 <html lang="{meta['html']}">
 <head>
 <meta charset="utf-8">
@@ -276,4 +282,4 @@ def page(lang, name, title, description, body, body_class=""):
 <script src="{a}js/main.js?v={ver("js/main.js")}" defer></script>
 </body>
 </html>
-"""
+""")

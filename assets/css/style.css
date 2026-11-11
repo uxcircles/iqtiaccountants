@@ -51,7 +51,6 @@ svg { width: 1.1em; height: 1.1em; fill: none; stroke: currentColor; stroke-widt
 .h-hero { font-size: clamp(2.6rem, 6.4vw, 5.2rem); font-weight: 700; letter-spacing: -.035em; line-height: 1; }
 .lang-zh .h-hero { font-size: clamp(2.3rem, 5.6vw, 4.4rem); line-height: 1.15; letter-spacing: 0; }
 .h-hero em, .h-xl em { font-style: normal; color: var(--blue); position: relative; white-space: nowrap; }
-.h-hero em::after { content: ""; position: absolute; left: 0; right: 0; bottom: .02em; height: .12em; background: var(--sun); border-radius: 99px; z-index: -1; opacity: .8; }
 .h-xl { font-size: clamp(2.4rem, 5.6vw, 4.4rem); letter-spacing: -.03em; }
 .lang-zh .h-xl { font-size: clamp(2.1rem, 4.8vw, 3.6rem); }
 .h-lg { font-size: clamp(1.9rem, 3.6vw, 3rem); }
@@ -59,7 +58,6 @@ svg { width: 1.1em; height: 1.1em; fill: none; stroke: currentColor; stroke-widt
 .lead { font-size: clamp(1.08rem, 1.5vw, 1.25rem); color: var(--ink-2); max-width: 40em; }
 .lead-sm { color: var(--ink-2); max-width: 34em; }
 .eyebrow { font: 600 .78rem/1.2 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--blue); margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
-.eyebrow::before { content: ""; width: 18px; height: 2px; background: currentColor; border-radius: 2px; }
 .lang-zh .eyebrow { letter-spacing: .08em; font-size: .85rem; }
 .eyebrow-light { color: #9db8ff; }
 
@@ -238,7 +236,6 @@ svg { width: 1.1em; height: 1.1em; fill: none; stroke: currentColor; stroke-widt
 .quote::before { content: "“"; font: 800 4.5rem/.6 var(--display); color: var(--blue); height: 28px; }
 .quote blockquote { margin: 0; font-size: 1.08rem; color: var(--ink); flex: 1; }
 .quote figcaption { font-weight: 700; display: flex; align-items: center; gap: 10px; }
-.quote figcaption::before { content: ""; width: 24px; height: 2px; background: var(--sun); }
 
 /* steps */
 .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; counter-reset: s; }
