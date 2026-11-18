@@ -62,7 +62,7 @@ UI = {
     "concept_long": L('Redesign concept. Not the <a href="https://www.iqtiaccountants.co.uk/" target="_blank" rel="noopener">official IQTi Accountants website</a>.',
                       '概念設計展示，並非 <a href="https://www.iqtiaccountants.co.uk/" target="_blank" rel="noopener">IQTi 會計師事務所官方網站</a>。'),
     "concept_by": L("Designed by ", "設計："),
-    "concept_note": L("Unofficial redesign concept by", "非官方概念設計："),
+    "concept_note": L("Unofficial redesign concept by ", "非官方概念設計："),
 }
 
 # Strings main.js needs at runtime
@@ -215,7 +215,7 @@ def footer(lang, page):
     </div>
   </div>
   <div class="wrap footer-base">
-    <span>© <span data-year>2026</span> IQTi Limited · <span class="concept-note">{r(UI['concept_note'], lang)} <a class="u" href="https://ux-circles.com/professionals" target="_blank" rel="noopener">UX CIRCLES</a></span></span>
+    <span>© <span data-year>2026</span> IQTi Limited · <span class="concept-note">{r(UI['concept_note'], lang)}<a class="u" href="https://ux-circles.com/professionals" target="_blank" rel="noopener">UX CIRCLES</a></span></span>
     <span class="footer-base-r">{lang_switch(lang, page)}<a href="#main" class="u">{r(UI['top'], lang)} ↑</a></span>
   </div>
 </footer>
